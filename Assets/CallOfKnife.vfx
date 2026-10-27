@@ -56,9 +56,9 @@ MonoBehaviour:
   - {fileID: 8926484042661614608}
   - {fileID: 8926484042661614613}
   - {fileID: 8926484042661614662}
+  - {fileID: 8926484042661615207}
   - {fileID: 8926484042661614893}
   - {fileID: 8926484042661615167}
-  - {fileID: 8926484042661615207}
   - {fileID: 8926484042661615231}
   - {fileID: 8926484042661615233}
   - {fileID: 8926484042661615237}
@@ -541,7 +541,7 @@ MonoBehaviour:
   flipbookBlendFrames: 0
   flipbookMotionVectors: 0
   useSoftParticle: 0
-  vfxSystemSortPriority: 0
+  vfxSystemSortPriority: 1
   sort: 0
   sortMode: 0
   revertSorting: 0
@@ -3443,7 +3443,7 @@ MonoBehaviour:
   flipbookBlendFrames: 0
   flipbookMotionVectors: 0
   useSoftParticle: 0
-  vfxSystemSortPriority: 0
+  vfxSystemSortPriority: 2
   sort: 0
   sortMode: 0
   revertSorting: 0
