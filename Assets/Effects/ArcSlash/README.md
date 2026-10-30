@@ -192,9 +192,18 @@ nattuhan의 「軌跡が歪む斬撃エフェクトをつくる」 튜토리얼�
 | DashMoveSpeed | 1 (0~5) | 점선 이동 배율. Update의 `t += angSpeed × DeltaTime × DashMoveSpeed`. 0이면 정지 |
 | FlashTrailColor | (1, 1, 1) | 직선 잔상(D 잔상) Initialize의 Set Color. 점 본체와 글로우에 함께 적용 |
 | FlashEndY | -0.8 | 직선(D)의 하단 클리핑, 직선 잔상의 생성 하한과 충돌면 Y를 함께 조절. ImpactPosition과 독립 |
+| Show_A_Arc | ON | 원호(A) Spawn의 Single Burst 활성화 |
+| Show_C_Trail | ON | 검 궤적(C, 그래프의 `System (4)`) Spawn의 Single Burst 활성화 |
+| Show_D_Flash | ON | 직선 섬광(D) Spawn의 Single Burst 활성화 |
+| Show_D_Afterimage | ON | 직선 잔상(D 잔상) Spawn의 Single Burst 활성화 |
+| Show_E_Impact | ON | 지면 충격 E 세 시스템(광원·링·링 입자) Spawn의 Single Burst 활성화를 한꺼번에 |
+| Show_F_Dash | ON | 점선 잔상(F) Spawn의 Single Burst 활성화 |
+| RepeatInterval | 2초 (1.3~10) | 자동 반복 주기. Spawner 8개 모두 Loop Duration = Constant, Loop Count = Infinite이고 이 값이 Loop Duration에 연결됨 |
 
 - 색 프로퍼티는 Color 타입입니다. Set Color 블록(RGB)에 연결된 것은 알파를 쓰지 않습니다.
 - `DashCount`를 512보다 크게 주면 capacity에 막혀 512개까지만 생성됩니다.
+- `RepeatInterval`: 각 Single Burst의 Delay는 루프 시작 기준이라 매 주기 같은 순서로 다시 재생됩니다. 전체가 끝나는 데 약 1.2초가 걸리고(D 잔상 0.317초 생성 + 수명 최대 0.9초), A·C·D·E 광원·E 링은 capacity 1이라 그보다 짧은 주기에서는 이전 입자가 남아 다음 입자가 생기지 못합니다. 그래서 최소값을 1.3초로 막았습니다.
+- `Show_*`는 생성(Burst)만 막습니다. 이미 생긴 입자는 남으므로, 바꾼 뒤에는 Play 또는 Reinit으로 다시 재생합니다. 단계별로 같은 배치를 찍으려면 Reseed On Play를 끄고 시드를 고정합니다.
 - 기본값과 변경값 비교 캡처: `Docs/Previews/ArcSlash_Combined_ExposedProps_Default_vs_Modified.png`
 
 ## 직선 잔상 (D 잔상) — ArcSlash_Combined에만 있음

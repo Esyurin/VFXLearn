@@ -1,0 +1,10 @@
+{
+    "name": "Unity.Testing.VisualEffectGraph.Editor",
+    "references": [
+        "Unity.VisualEffectGraph.Editor",
+        "Unity.VisualEffectGraph.Runtime",
+        "Unity.ShaderGraph.Editor"
+    ],
+    "includePlatforms": ["Editor"],
+    "autoReferenced": false
+}

@@ -1629,6 +1629,9 @@ VisualEffect:
       - m_Value: -1.8
         m_Name: FlashEndY
         m_Overridden: 1
+      - m_Value: 1.3
+        m_Name: RepeatInterval
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -1675,7 +1678,22 @@ VisualEffect:
     m_NamedObject:
       m_Array: []
     m_Bool:
-      m_Array: []
+      m_Array:
+      - m_Value: 1
+        m_Name: Show_F_Dash
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Show_E_Impact
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Show_C_Trail
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Show_D_Afterimage
+        m_Overridden: 1
+      - m_Value: 1
+        m_Name: Show_D_Flash
+        m_Overridden: 1
 --- !u!4 &1854842246
 Transform:
   m_ObjectHideFlags: 0
